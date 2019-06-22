@@ -1,0 +1,12 @@
+<form>
+    <h3>Message to encrypt:</h3>
+    <input type='text' name='message' /><br>
+    <h3>Shift factor (number):</h3>
+    <input type='number' name='shift' /><br><br>
+    <input type='submit' value='Encrypt!' /><br>
+</form>
+
+<h3>Initial Message:</h2>
+<p> <%= message %>
+<h3>Caesar'd Message:</h2>
+<p> <%= encrypted_message %>
