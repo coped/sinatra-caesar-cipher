@@ -1,12 +1,15 @@
-<form>
-    <h3>Message to encrypt:</h3>
-    <input type='text' name='message' /><br>
-    <h3>Shift factor (number):</h3>
-    <input type='number' name='shift' /><br><br>
-    <input type='submit' value='Encrypt!' /><br>
-</form>
-
-<h3>Initial Message:</h2>
-<p> <%= message %>
-<h3>Caesar'd Message:</h2>
-<p> <%= encrypted_message %>
+<div class="form">
+    <form action='/show_cipher'>
+        <h3>Message to encrypt:</h3>
+        <input type='text' name='message' /><br>
+        <h3>Shift factor (number):</h3>
+        <input type='number' name='shift' /><br><br>
+        <input type='submit' value='Encrypt!' /><br>
+    </form>
+</div>
+<div class="show-message">
+    <h3>Initial Message:</h3>
+    <p><%= message %></p>
+    <h3>Caesar'd Message:</h3>
+    <p><%= encrypted_message %></p>
+</div>

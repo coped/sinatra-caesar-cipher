@@ -1,6 +1,3 @@
-require 'sinatra'
-require 'sinatra/reloader' if development?
-
 def caesar_cipher(string, shift)
     new_string = string.split("").map do |letter|
         shift = shift % 26
@@ -19,18 +16,4 @@ def caesar_cipher(string, shift)
         end
     end
     new_string.join
-end
-
-get '/' do
-    erb :index, layout: :main
-end
-
-get '/show_cipher' do
-    message = params['message']
-    shift = params['shift']
-    encrypted_message = caesar_cipher(message, shift.to_i)
-    erb :show_cipher, layout: :main, :locals => {
-        :message => message,
-        :encrypted_message => encrypted_message
-    }
 end
